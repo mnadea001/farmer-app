@@ -109,6 +109,23 @@ Modification de la view create pour envoyer les données
 
 
 
+### TESTS
+
+Installation de la librairie Pest
+
+```
+composer remove phpunit/phpunit
+composer require pestphp/pest --dev --with-all-dependencies
+./vendor/bin/pest --init
+composer require pestphp/pest-plugin-faker --dev
+composer require pestphp/pest-plugin-laravel --dev
+```
+
+Pour lancer tests:
+
+````
+./vendor/bin/pest
+````
 
 
 ### COMMANDES 
