@@ -26,14 +26,17 @@
         <br>
         <label for="password_confirmation">confirmation password</label>
         <input v-model="formData.password_confirmation" type="password" id="password_confirmation">
-        <button type="button" v-on:click="createUser">Créer un nouvel utilisateur</button>
+        <button type="button" v-on:click="createUserAction">Créer un nouvel utilisateur</button>
     </form>
 </template>
 <script setup>
 import {ref} from "vue";
-import axios from "axios";
+import useUser from "../../composables/users/useUser";
 
-const errors = ref({});
+const {
+    errors,
+    createUser,
+} = useUser();
 
 const formData = ref({
     name: '',
@@ -42,15 +45,9 @@ const formData = ref({
     password_confirmation: '',
 });
 
-const createUser = () => {
-    axios.post('/api/users', formData.value )
-    .then((res)=> {
-        errors.value = {}; 
-        window.location.href = '/';
-        // console.log(res)
-    })
-    .catch((err)=> errors.value = err.response.data.errors);
- 
+
+const createUserAction = async () => {
+    await createUser(formData.value);
 }
 
 </script>
