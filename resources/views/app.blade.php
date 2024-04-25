@@ -10,7 +10,6 @@
 <body>
     <!-- instance de vue -->
     <div id="app">
-        <users-list />
     @yield('content')
     </div>
 </body>
