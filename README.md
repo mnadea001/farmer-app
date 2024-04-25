@@ -46,6 +46,7 @@ Creation du fichier resources/js/components/users/UsersList.vue
 Import du composant UsersList dans app.blade.php
 Modification du fichier routes/web.php pour indiquer la route de app.blade.php 
 
+----
 Création du controller IndexController
 
 ```
@@ -65,7 +66,7 @@ php artisan make:resource UserResource
 php artisan make:resource UserCollection --collection
 ```
 Modification du fichier app/Htpp/Resources/UserCollection (récupération users)
-Modification du fichier app/Htpp/Resources/UserResource (transfert data de users)
+Modification du fichier app/Htpp/Resources/UserResource (transfert data de users, ce que l'on veut afficher)
 
 Modifier le controller IndexController : fonction invoke afin de retourner tous les utilisateurs
 Création d'utilisateurs dans database/seeders/DatabaseSeeder.php
@@ -84,6 +85,31 @@ Modification de la route dans routes/web.php
 Modificiation du controller UsersListController
 Création de la view resources/views/users/index.blade.app
 Modification de resource/js/components/users/UsersList.vue afin d'afficher la liste des utilisateurs
+
+----
+
+Création d'une view resources/views/users/create.blade.php
+Création d'une nouvelle route dans web.php (ajouter name)
+Création d'un nouveau composant vue CreateUser.vue
+Import/ Déclaration de CreateUser.vue dans app.js
+Ajouter d'un bouton dans users/index pour rediriger vers create 
+Ajout d'un formulaire dans CreateUser.vue 
+Création d'un nouveau controller 
+````
+php artisan make:controller Api\\User\\StoreController --invokable
+````
+
+Création d'une nouvelle route en post dans api.php pour store
+Modification de StoreController pour récupérer les données du formulaire
+Modification du modele User pour le traitement du password
+Modification de la view create pour envoyer les données
+
+
+
+
+
+
+
 
 ### COMMANDES 
 

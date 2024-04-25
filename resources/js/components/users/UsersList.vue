@@ -4,7 +4,9 @@ v-for="user in users"
 >
     <div>
         <p v-text="user.name"
-        />
+        />        
+        <!-- <p v-text="user.password"
+        /> -->
     </div>
 </template>
 </template>
