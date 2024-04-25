@@ -46,7 +46,8 @@ const createUser = () => {
     axios.post('/api/users', formData.value )
     .then((res)=> {
         errors.value = {}; 
-        console.log(res)
+        window.location.href = '/';
+        // console.log(res)
     })
     .catch((err)=> errors.value = err.response.data.errors);
  
