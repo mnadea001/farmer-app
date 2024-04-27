@@ -106,6 +106,11 @@ Modification de la view create pour envoyer les données
 
 
 
+### INSTALLATION TAILWIND 
+
+````
+
+````
 
 
 
