@@ -127,7 +127,15 @@ Pour lancer tests:
 ./vendor/bin/pest
 ````
 
+### INSTALLATION TAILWIND 
 
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+Modification du fichier tailwinf.config.js et import tailwind @ resources/css/app.css
+
+ 
 ### COMMANDES 
 
 ```

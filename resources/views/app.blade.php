@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- instance de vue -->
-    <div id="app">
+    <div id="app" class="mt-10 container mx-auto">
     @yield('content')
     </div>
 </body>
