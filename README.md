@@ -105,9 +105,16 @@ Modification du modele User pour le traitement du password
 Modification de la view create pour envoyer les données
 
 
+----
+Création Model Vache 
 
+php artisan make:model Vache --factory
+php artisan make:migration create_vaches_table
 
-
+Modifier database/factories/VacheFactory
+Modifier la table create_vaches_tables pour ajouter les champs nom et description
+php artisan migrate
+Import routes dans resources/js/app.js
 
 ### TESTS
 

@@ -16,3 +16,11 @@ Route::prefix('users')
         // Route::get('/{user}', ShowController::class)->name('show');
         Route::post('/', StoreController::class)->name('store');
     });
+
+Route::prefix('vaches')
+    ->as('vaches.')
+    ->group(function () {
+        Route::get('/', IndexController::class)->name('index');
+        // Route::get('/{user}', ShowController::class)->name('show');
+        // Route::post('/', StoreController::class)->name('store');
+    });
