@@ -140,5 +140,7 @@ Modification du fichier tailwinf.config.js et import tailwind @ resources/css/ap
 
 ```
 php artisan route:list --path="users"
+npm install @heroicons/vue
+npm install @headlessui/vue
 
 ```
