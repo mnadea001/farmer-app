@@ -178,3 +178,4 @@ php artisan storage:link
 ### DOCUMENTATION 
 
 https://tailwindcss.com/docs/
+https://flowbite.com/docs/
