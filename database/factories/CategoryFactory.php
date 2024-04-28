@@ -16,8 +16,13 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
+       $categories = ['Chien', 'Cheval', 'Brebis', 'Cochon'];
+
+        // Sélectionnez aléatoirement un nom de catégorie dans la liste
+        $randomCategory = $this->faker->randomElement($categories);
+
         return [
-            'name' => $this->faker->word,
+            'name' => $randomCategory,
         ];
     }
 }

@@ -16,8 +16,13 @@ class RaceFactory extends Factory
      */
     public function definition(): array
     {
+        $races = ['Labrador', 'Frison', 'Pottok', 'Irish Cob', 'Mérinos', 'Solognotes'];
+
+        // Sélectionnez aléatoirement un nom de race dans la liste
+        $randomRace = $this->faker->randomElement($races);
+
         return [
-            'name' => $this->faker->word,
+            'name' => $randomRace,
         ];
     }
 }
