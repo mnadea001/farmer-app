@@ -12,7 +12,7 @@ class VachesListController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request)
+    public function __invoke(Request $request): View
     {
         return view('vaches.index');
     }
