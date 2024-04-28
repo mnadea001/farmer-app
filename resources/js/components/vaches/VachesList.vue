@@ -7,7 +7,7 @@
     </select>
     <template v-for="vache in vaches">
         <div
-            class="bg-gradient-to-r from-yellow-50 to-yellow-300 my-2 p-5 rounded-md shadow-md"
+            class="bg-gradient-to-r from-yellow-50 to-gray-200 my-2 p-5 rounded-md hover:shadow-md"
         >
             <p class="font-sans text-xl hover:italic">{{ vache.name }}</p>
             <p>{{ vache.description }}</p>

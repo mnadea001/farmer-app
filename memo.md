@@ -8,6 +8,7 @@ Modification fichier .env --> BDD sqlite
 
 ```
 php artisan migrate
+php artisan key:generate
 ````
 
 --------------------------

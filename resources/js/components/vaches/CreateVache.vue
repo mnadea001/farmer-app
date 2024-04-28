@@ -77,7 +77,7 @@
         <br />
         <div class="flex items-center justify-between">
             <button
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-3"
+                class="bg-gradient-to-r from-yellow-50 to-yellow-300 p-2 rounded-md text-sm hover:text-blue-500 my-5 text-xl text-gray-700"
                 type="button"
                 v-on:click="createVacheAction"
             >
