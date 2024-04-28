@@ -20,9 +20,8 @@ class Vache extends Model
         'name',
         'description',
         // 'age',
-        // race
         'price',
-        'is_sold',
+        // 'is_sold',
         'category_id',
         'race_id',
     ];

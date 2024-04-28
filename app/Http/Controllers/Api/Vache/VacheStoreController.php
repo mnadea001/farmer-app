@@ -13,6 +13,10 @@ class VacheStoreController extends Controller
         $validated = $request->validate([
             'name' => 'required|string',
             'description' => 'required|string',
+            'price' => 'required|numeric',
+            'is_sold' => 'boolean',
+            'category_id' => 'required|exists:categories,id',
+            'race_id' => 'required|exists:races,id',
         ]);
         $vache = Vache::create($validated);
 
