@@ -8,7 +8,7 @@ export default function () {
        await axios.post('/api/users', formData)
         .then((res)=> {
             errors.value = {}; 
-            window.location.href = '/';
+            window.location.href = '/users';
             // console.log(res)
         })
         .catch((err)=> errors.value = err.response.data.errors);

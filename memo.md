@@ -172,3 +172,9 @@ php artisan storage:link
 
 ```
 -->  utiliser la commande php artisan storage:link pour créer un lien symbolique vers le répertoire public/storage, qui pointera vers le répertoire de stockage réel.
+
+
+=================================
+### DOCUMENTATION 
+
+https://tailwindcss.com/docs/
