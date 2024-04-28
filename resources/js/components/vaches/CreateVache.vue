@@ -1,8 +1,6 @@
 <template>
     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div v-if="successMessage" class="text-green-500">
-            {{ successMessage }}
-        </div>
+  
         <div v-if="errors.name" class="text-red-500">{{ errors.name[0] }}</div>
         <div v-if="errors.description" class="text-red-500">
             {{ errors.description[0] }}

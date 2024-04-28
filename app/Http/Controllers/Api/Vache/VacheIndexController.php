@@ -12,8 +12,22 @@ class VacheIndexController extends Controller
 
     public function __invoke(Request $request)
     {
-        return new VacheCollection(
-            resource: Vache::all(),
-        );
+
+        $filter = $request->query('filter');
+
+
+
+        $query = Vache::query();
+
+    if ($filter === 'price') {
+        $query->orderBy('price', 'asc');
+    } elseif ($filter === 'name') {
+        $query->orderBy('name', 'asc');
+    }
+    
+    $vaches = $query->get();
+
+    return new VacheCollection($vaches);
+
     }
 }
