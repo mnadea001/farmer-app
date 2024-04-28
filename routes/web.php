@@ -9,3 +9,4 @@ Route::get('/users', \App\Http\Controllers\User\UsersListController::class);
 Route::view('/users/create', 'users.create')->name('users.create');
 Route::view('/vaches/create', 'vaches.create')->name('vaches.create');
 Route::view('/', 'home')->name('home');
+Route::view('/contact', 'contact')->name('contact');

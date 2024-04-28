@@ -9,7 +9,7 @@
         <div
             class="bg-gradient-to-r from-yellow-50 to-gray-200 my-2 p-5 rounded-md hover:shadow-md"
         >
-            <p class="font-sans text-xl hover:italic">{{ vache.name }}</p>
+            <p class="font-sans text-xl hover:italic font-semibold">{{ vache.name }}</p>
             <p>{{ vache.description }}</p>
             <p>Prix: {{ vache.price }} €</p>
             <p>{{ vache.is_sold ? "Vendu" : "En vente" }}</p>
