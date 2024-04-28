@@ -3,6 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Category;
+use App\Models\Race;
 
 return new class extends Migration
 {
@@ -15,6 +17,19 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
+            $table->float('price')->default(0);
+
+            $table->boolean('is_sold')->default(false);
+
+            $table
+                ->foreignIdFor(Category::class)
+                ->constrained()
+                ->cascadeOnDelete();
+
+            $table
+                ->foreignIdFor(Race::class)
+                ->constrained()
+                ->cascadeOnDelete();
             $table->timestamps();
         });
     }

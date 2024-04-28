@@ -118,6 +118,21 @@ Modifier la table create_vaches_tables pour ajouter les champs nom et descriptio
 php artisan migrate
 Import routes dans resources/js/app.js
 
+Etapes similaires à User pour afficher la liste des vaches et le formulaire de création 
+
+--
+
+Creation du model Category en relation avec Vache 
+
+```
+php artisan make:model Category --factory -m
+
+```
+Modifier le model et le fichier de migration, le fichier Factory de Category puis de Vache, modifier VacheResource afin d'afficher le nouveau champ category, 
+
+
+----
+
 ### TESTS
 
 Installation de la librairie Pest

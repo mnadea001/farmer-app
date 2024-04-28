@@ -18,7 +18,10 @@ class VacheResource extends JsonResource
             'id'=>$this->id,
             'name'=>$this->name,
             'description'=>$this->description,
-            // 'category'=>$this->category,
+            'price'=>$this->price,
+            'is_sold'=>$this->is_sold,
+            'category'=>$this->category,
+            'race'=>$this->race,
         ];
     }
 }

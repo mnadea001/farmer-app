@@ -2,9 +2,19 @@
 <template
 v-for="vache in vaches"
 >
-    <div>
+    <div class="border">
         <p v-text="vache.name"
-        />        
+        />       
+        <p v-text="vache.description"
+        />   
+        <p v-text="vache.price"
+        />   
+        <p v-text="vache.is_sold"
+        /> 
+        <p v-text="vache.category.name"
+        /> 
+        <p v-text="vache.race.name"
+        /> 
     </div>
 </template>
 </template>
