@@ -21,7 +21,11 @@ class VacheIndexController extends Controller
 
     if ($filter === 'price') {
         $query->orderBy('price', 'asc');
-    } elseif ($filter === 'name') {
+    }
+    if ($filter === 'is_sold') {
+        $query->orderBy('is_sold', 'asc');
+    }
+    elseif ($filter === 'name') {
         $query->orderBy('name', 'asc');
     }
     

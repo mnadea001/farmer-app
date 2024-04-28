@@ -3,6 +3,7 @@
         <option value="">Tous</option>
         <option value="price">Prix croissant</option>
         <option value="name">Nom croissant</option>
+        <option value="is_sold">Statut</option>
     </select>
     <template v-for="vache in vaches">
         <div
