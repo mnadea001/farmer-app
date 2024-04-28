@@ -10,6 +10,7 @@
 <body>
     <!-- instance de vue -->
     <div id="app" class="mt-10 container mx-auto">
+        <!-- <header/> -->
     @yield('content')
     </div>
 </body>

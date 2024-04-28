@@ -5,8 +5,6 @@ v-for="vache in vaches"
     <div>
         <p v-text="vache.name"
         />        
-        <!-- <p v-text="user.password"
-        /> -->
     </div>
 </template>
 </template>

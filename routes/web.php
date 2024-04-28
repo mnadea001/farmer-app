@@ -7,3 +7,4 @@ use App\Http\Controllers\Api\Vache\VachesListController;
 Route::get('/vaches', \App\Http\Controllers\Vache\VachesListController::class);
 Route::get('/', \App\Http\Controllers\User\UsersListController::class);
 Route::view('/users/create', 'users.create')->name('users.create');
+Route::view('/vaches/create', 'vaches.create')->name('vaches.create');

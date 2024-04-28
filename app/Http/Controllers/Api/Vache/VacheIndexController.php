@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Vache;
 use App\Http\Resources\VacheCollection;
 
-class IndexController extends Controller
+class VacheIndexController extends Controller
 {
 
     public function __invoke(Request $request)
