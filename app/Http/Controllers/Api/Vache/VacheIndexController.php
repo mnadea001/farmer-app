@@ -19,19 +19,19 @@ class VacheIndexController extends Controller
 
         $query = Vache::query();
 
-    if ($filter === 'price') {
-        $query->orderBy('price', 'asc');
-    }
-    if ($filter === 'is_sold') {
-        $query->orderBy('is_sold', 'asc');
-    }
-    elseif ($filter === 'name') {
-        $query->orderBy('name', 'asc');
-    }
+        if ($filter === 'price') {
+            $query->orderBy('price', 'asc');
+        }
+        if ($filter === 'is_sold') {
+            $query->orderBy('is_sold', 'asc');
+        }
+        elseif ($filter === 'name') {
+            $query->orderBy('name', 'asc');
+        }
     
-    $vaches = $query->get();
+        $vaches = $query->get();
 
-    return new VacheCollection($vaches);
+        return new VacheCollection($vaches);
 
     }
 }

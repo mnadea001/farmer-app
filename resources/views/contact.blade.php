@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-<a class="p-5 rounded-md text-sm hover:text-blue-500 my-5 md:float-end" href="/vaches">Retour à liste</a>
+<a class="p-5 rounded-md text-sm hover:text-blue-500 my-5 md:float-end" href="/vaches">Retour à la liste</a>
 
 <div class="p-5">
     <div class="flex flex-col md:flex-row justify-center items-center">
