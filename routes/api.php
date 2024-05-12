@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\Vache\VacheShowController;
 use App\Http\Controllers\Api\Vache\VacheIndexController;
 use App\Http\Controllers\Api\User\StoreController;
 use App\Http\Controllers\Api\Vache\VacheStoreController;
+use App\Http\Controllers\Api\Vache\VacheEditController;
 
 
 Route::prefix('users')
@@ -21,5 +22,7 @@ Route::prefix('vaches')
     ->group(function () {
         Route::get('/', VacheIndexController::class)->name('vacheindex');
         Route::get('/{vache}', VacheShowController::class)->name('vacheshow');
+        
+        Route::post('/', VacheEditController::class)->name('vacheedit');
         Route::post('/', VacheStoreController::class)->name('vachestore');
     });

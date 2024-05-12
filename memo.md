@@ -179,3 +179,6 @@ php artisan storage:link
 
 https://tailwindcss.com/docs/
 https://flowbite.com/docs/
+
+
+===================================
