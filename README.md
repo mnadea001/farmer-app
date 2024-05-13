@@ -11,7 +11,7 @@ Pour lancer le projet:
 cd farmer-app
 npm install
 npm run dev
-php artisan migrate
+php artisan migrate --seed
 php artisan serve
 
 ```
