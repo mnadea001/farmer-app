@@ -69,6 +69,17 @@ export default function () {
         }
     };
 
+    const deleteVache = async (vacheId) => {
+        try {
+            // console.log('id vache dans useVache',vacheId)
+            const response = await axios.delete(`/api/vaches/${vacheId}`);
+
+            // console.log('useVache form name value',formVacheData.value.name)
+        } catch (error) {
+            console.error("Error deleting animal:", error);
+        }
+    };
+
     return {
         errors,
         categories,
@@ -77,5 +88,6 @@ export default function () {
         editVache,
         getVache,
         formVacheData,
+        deleteVache
     };
 }

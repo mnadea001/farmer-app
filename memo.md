@@ -98,6 +98,7 @@ Ajout d'un formulaire dans CreateUser.vue
 Création d'un nouveau controller 
 ````
 php artisan make:controller Api\\User\\StoreController --invokable
+php artisan make:controller Api\\Vache\\VacheDeleteController --invokable
 ````
 
 Création d'une nouvelle route en post dans api.php pour store

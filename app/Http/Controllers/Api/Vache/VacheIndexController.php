@@ -15,8 +15,6 @@ class VacheIndexController extends Controller
 
         $filter = $request->query('filter');
 
-
-
         $query = Vache::query();
 
         if ($filter === 'price') {

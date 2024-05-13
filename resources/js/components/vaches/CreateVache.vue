@@ -77,11 +77,11 @@
         <br />
         <div class="flex items-center justify-between">
             <button
-                class="bg-gradient-to-r from-yellow-50 to-yellow-300 p-2 rounded-md text-sm hover:text-blue-500 my-5 text-xl text-gray-700"
+                class="bg-gradient-to-r from-yellow-50 to-yellow-300 p-2 rounded-md text-sm hover:font-semibold my-5 text-xl text-gray-700"
                 type="button"
                 v-on:click="createVacheAction"
             >
-                Ajouter
+                Confirmer l'ajout
             </button>
         </div>
     </form>

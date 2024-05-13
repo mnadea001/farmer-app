@@ -13,7 +13,9 @@
         <p class="">Prix: {{ vache.price }} €</p>
         <p class="">Type: {{ vache.category.name }}</p>
         <p class="mb-3">Race: {{ vache.race.name }}</p>
-        <a :href="'/vaches/' + vache.id + '/edit'" class="bg-indigo-900 hover:bg-white hover:text-black p-2 rounded-md text-sm text-white my-5 text-3xl font-semibold">Modifier</a>
+        <hr class="my-5"/>
+        <a :href="'/vaches/' + vache.id + '/edit'" class="bg-indigo-900 hover:bg-white hover:text-black p-2 rounded-md text-sm text-white my-5 me-5 text-3xl font-semibold">Modifier les informations</a>
+        <a :href="'/vaches/' + vache.id + '/delete'" class="bg-red-900 hover:bg-red-500 p-2 rounded-md text-sm text-white my-5 text-3xl font-semibold ms-5">Supprimer l'animal</a>
 
     </div>
     <div v-else>
