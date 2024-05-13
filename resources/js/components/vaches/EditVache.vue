@@ -87,20 +87,12 @@
     </form>
 </template>
 <script setup>
-import { ref, onMounted, toRefs } from "vue";
+import { onMounted } from "vue";
 import useVache from "../../composables/vaches/useVache";
 
-const { errors, editVache, categories, races, getVache } = useVache();
+const { errors, editVache, categories, races, getVache, formVacheData } = useVache();
 
 
-const formVacheData = ref({
-    name: "",
-    description: "",
-    price: 0,
-    category_id: null,
-    race_id: null,
-    is_sold: false,
-});
 onMounted(() => {
     const segments = window.location.pathname.split("/"); 
     const vacheId = segments[segments.length - 2]; 
