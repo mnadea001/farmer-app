@@ -28,10 +28,10 @@ export default function () {
 
     const getVache = async (vacheId) => {
         try {
-            console.log('id vache dans useVache',vacheId)
+            // console.log('id vache dans useVache',vacheId)
             const response = await axios.get(`/api/vaches/${vacheId}`);
             vache.value = response.data.data;
-            console.log('vache value',vache.value)
+            // console.log('vache value',vache.value)
             // Mise à jour des données de formVacheData
             formVacheData.value.name = response.data.data.name;
             formVacheData.value.description = response.data.data.description;
@@ -39,7 +39,7 @@ export default function () {
             formVacheData.value.category_id = response.data.data.category_id;
             formVacheData.value.race_id = response.data.data.race_id;
             formVacheData.value.is_sold = response.data.data.is_sold;
-            console.log('useVache form name value',formVacheData.value.name)
+            // console.log('useVache form name value',formVacheData.value.name)
         } catch (error) {
             console.error("Error fetching vache details:", error);
         }
@@ -56,16 +56,17 @@ export default function () {
             .catch((err) => (errors.value = err.response.data.errors));
     };
 
-    const editVache = async (vacheId) => {
-   
-        await axios
-            .patch(`/api/vaches/${vacheId}`, formVacheData)
-            .then((res) => {
-                console.log(res);
-                errors.value = {};
-                window.location.href = '/vaches';
-            })
-            .catch((err) => (errors.value = err.response.data.errors));
+    const editVache = async (vacheId, formVacheData) => {
+        try {
+            console.log('hello useVache');
+            const response = await axios.patch(`/api/vaches/${vacheId}`, formVacheData.value);
+            console.log('response useVache', response);
+            errors.value = {};
+            window.location.href = '/vaches';
+        } catch (err) {
+            console.error(err);
+            errors.value = err.response.data.errors;
+        }
     };
 
     return {

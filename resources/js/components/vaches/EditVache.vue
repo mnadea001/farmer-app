@@ -36,6 +36,15 @@
             type="float"
             id="price"
         />
+        <!-- <label class="block text-gray-700 text-sm font-bold mb-2" for="name"
+            >Statut</label
+        >
+        <input
+            class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            v-model="formVacheData.is_sold"
+            type="bool"
+            id="is_sold"
+        /> -->
         <!-- Champ de sélection pour la catégorie -->
         <label
             class="block text-gray-700 text-sm font-bold mb-2"
@@ -77,7 +86,7 @@
         <br />
         <div class="flex items-center justify-between">
             <button
-                class="bg-gradient-to-r from-yellow-50 to-yellow-300 p-2 rounded-md text-sm hover:text-blue-500 my-5 text-xl text-gray-700"
+                class="bg-gradient-to-r from-yellow-50 to-yellow-300 p-2 rounded-md text-sm hover:font-semibold my-5 text-xl text-gray-700"
                 type="button"
                 v-on:click="editVacheAction"
             >
@@ -96,16 +105,15 @@ const { errors, editVache, categories, races, getVache, formVacheData } = useVac
 onMounted(() => {
     const segments = window.location.pathname.split("/"); 
     const vacheId = segments[segments.length - 2]; 
-    console.log('id vache dans edit', vacheId)
     getVache(vacheId); 
-    console.log('getVache terminé')
 });
 
 const editVacheAction = async () => {
     const segments = window.location.pathname.split("/"); 
     const vacheId = segments[segments.length - 2]; 
-    await editVache(vacheId);
-    console.log('form in edit',formVacheData.value)
+    console.log('hello EditVache');
+    await editVache(vacheId, formVacheData);
+    console.log('form in edit', formVacheData);
 
 };
 </script>

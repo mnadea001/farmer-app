@@ -23,6 +23,6 @@ Route::prefix('vaches')
         Route::get('/', VacheIndexController::class)->name('vacheindex');
         Route::get('/{vache}', VacheShowController::class)->name('vacheshow');
         
-        Route::post('/', VacheEditController::class)->name('vacheedit');
+        Route::patch('/{vache}', VacheEditController::class)->name('vacheedit');
         Route::post('/', VacheStoreController::class)->name('vachestore');
     });

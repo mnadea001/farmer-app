@@ -10,7 +10,7 @@ use Illuminate\Http\JsonResponse;
 class VacheEditController extends Controller
 {
 
-    public function __invoke(Request $request): JsonResponse
+    public function __invoke(Request $request, Vache $vache): JsonResponse
     {
         $validated = $request->validate([
             'name' => 'required|string',
